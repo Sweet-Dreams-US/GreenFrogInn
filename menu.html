@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1B3329">
+  <title>Menu — The Green Frog Inn · Fort Wayne sports pub since 1933</title>
+  <meta name="description" content="The full Green Frog Inn menu — starters, gourmet burgers, signature frog legs, sandwiches, baskets, hot wings, drinks &amp; drafts. Order online for pickup at 820 Spring St, Fort Wayne.">
+  <link rel="icon" href="assets/img/frog-nav.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="wrap nav__row">
+    <a class="nav__brand" href="index.html" aria-label="The Green Frog Inn home">
+      <img src="assets/img/frog-mark.png" alt="">
+      <span>
+        <span class="nav__brand-text">Green Frog</span>
+        <span class="nav__brand-tag">est. 1933</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="menu.html">Menu</a>
+      <a class="nav__link" href="story.html">Story</a>
+      <a class="nav__link" href="visit.html">Visit</a>
+    </nav>
+    <button class="nav__cart" data-cart-open aria-label="Open tab">
+      <span>tab</span>
+      <span class="nav__cart-count" data-cart-count style="display:none">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="menu-hero wrap-narrow">
+  <span class="eyebrow">handcrafted, pulled, plated</span>
+  <h1>the <em>full</em> menu</h1>
+  <p>tap any item to drop it on your tab — pickup at 820 spring st, hot and ready.</p>
+</section>
+
+<div class="wrap">
+  <div class="menu-tabs">
+    <button class="menu-tab is-active" data-menu-tab="starters">starters</button>
+    <button class="menu-tab" data-menu-tab="burgers">burgers</button>
+    <button class="menu-tab" data-menu-tab="frog-legs">frog legs</button>
+    <button class="menu-tab" data-menu-tab="sandwiches">sandwiches</button>
+    <button class="menu-tab" data-menu-tab="baskets">baskets</button>
+    <button class="menu-tab" data-menu-tab="salads">salads</button>
+    <button class="menu-tab" data-menu-tab="drinks">drinks</button>
+  </div>
+</div>
+
+<!-- ========== STARTERS ========== -->
+<section class="menu-section wrap" id="starters">
+  <h2 class="menu-section__title">starters</h2>
+  <p class="menu-section__sub">share the table · keep the conversation going</p>
+  <div class="menu-grid">
+
+    <article class="item-card">
+      <span class="item-card__sticker">favorite ♡</span>
+      <h3 class="item-card__name">soft pretzels &amp; beer cheese</h3>
+      <p class="item-card__desc">salt-crusted bavarian pretzels · house beer cheese</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$5.95</span>
+        <button class="item-card__add" data-add data-id="pretzel" data-name="soft pretzels &amp; beer cheese" data-price="5.95" data-sub="house beer cheese" data-emoji="🥨"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">irish nachos</h3>
+      <p class="item-card__desc">waffle chips · cheese · bacon · jalapeños · sour cream</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.99</span>
+        <button class="item-card__add" data-add data-id="irish-nachos" data-name="irish nachos" data-price="6.99" data-sub="loaded waffle chips" data-emoji="☘️"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">nachos supreme</h3>
+      <p class="item-card__desc">tortilla chips · queso · seasoned beef · tomato · jalapeños</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.99</span>
+        <button class="item-card__add" data-add data-id="nachos-supreme" data-name="nachos supreme" data-price="8.99" data-sub="loaded · share-size" data-emoji="🌮"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">snack basket</h3>
+      <p class="item-card__desc">cauliflower · mushrooms · onion rings · pub fries · zucchini</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.99</span>
+        <button class="item-card__add" data-add data-id="snack-basket" data-name="snack basket" data-price="6.99" data-sub="five things fried" data-emoji="🍟"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">onion rings</h3>
+      <p class="item-card__desc">thick cut · beer-battered · golden fried</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$5.95</span>
+        <button class="item-card__add" data-add data-id="onion-rings" data-name="onion rings" data-price="5.95" data-sub="beer-battered" data-emoji="🧅"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">mozzarella sticks</h3>
+      <p class="item-card__desc">five herb-crusted sticks · marinara on the side</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$5.49</span>
+        <button class="item-card__add" data-add data-id="mozz-sticks" data-name="mozzarella sticks" data-price="5.49" data-sub="5 sticks · marinara" data-emoji="🧀"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">giggin' spears</h3>
+      <p class="item-card__desc">lightly battered dill spears · creamy horsey sauce</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$5.95</span>
+        <button class="item-card__add" data-add data-id="dill-spears" data-name="giggin' spears" data-price="5.95" data-sub="battered &amp; fried" data-emoji="🥒"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">pub fries</h3>
+      <p class="item-card__desc">crispy seasoned · just the right amount of salt</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$4.99</span>
+        <button class="item-card__add" data-add data-id="pub-fries" data-name="pub fries" data-price="4.99" data-sub="house seasoning" data-emoji="🍟"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">garlic toast w/ cheese</h3>
+      <p class="item-card__desc">buttery garlic toast · melted provolone</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$4.99</span>
+        <button class="item-card__add" data-add data-id="garlic-toast" data-name="garlic toast w/ cheese" data-price="4.99" data-sub="provolone melt" data-emoji="🧄"><span>add to tab</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="squiggle" aria-hidden="true"><svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div></div>
+
+<!-- ========== BURGERS ========== -->
+<section class="menu-section wrap" id="burgers">
+  <h2 class="menu-section__title">gourmet burgers</h2>
+  <p class="menu-section__sub">all 1/3-lb steakburgers · served with pub fries · tuesday: build-your-own $2 off</p>
+  <div class="menu-grid menu-grid--2">
+
+    <article class="item-card">
+      <span class="item-card__sticker">classic ✦</span>
+      <h3 class="item-card__name">the classic steak burger</h3>
+      <p class="item-card__desc">1/3-lb patty · american cheese · lettuce · tomato · onion</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$5.99</span>
+        <button class="item-card__add" data-add data-id="classic-burger" data-name="the classic steak burger" data-price="5.99" data-sub="1/3-lb · classic" data-emoji="🍔"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">frog burger</h3>
+      <p class="item-card__desc">house signature · onion stack · two cheeses · special sauce</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="frog-burger" data-name="frog burger" data-price="6.95" data-sub="onion stack · two cheese" data-emoji="🐸"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">coney burger</h3>
+      <p class="item-card__desc">topped with house coney chili and diced onion</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="coney-burger" data-name="coney burger" data-price="6.95" data-sub="coney chili · onion"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">western burger</h3>
+      <p class="item-card__desc">bbq sauce · cheddar · crispy onion strings · bacon</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="western-burger" data-name="western burger" data-price="6.95" data-sub="bbq · bacon · onion"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">mushroom swiss</h3>
+      <p class="item-card__desc">sautéed mushrooms · melted swiss · house aioli</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="mushroom-swiss" data-name="mushroom swiss burger" data-price="6.95" data-sub="mushrooms · swiss"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">philly burger</h3>
+      <p class="item-card__desc">peppers · onions · provolone · cheese whiz drizzle</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="philly-burger" data-name="philly burger" data-price="6.95" data-sub="peppers · onions · cheese"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">favorite ♡</span>
+      <h3 class="item-card__name">black-n-blue</h3>
+      <p class="item-card__desc">blackened patty · blue cheese crumble · arugula</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="black-blue" data-name="black-n-blue burger" data-price="6.95" data-sub="blackened · blue cheese"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">patty melt on rye</h3>
+      <p class="item-card__desc">grilled rye · caramelized onion · swiss · 1000 island</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="patty-melt" data-name="patty melt on rye" data-price="6.95" data-sub="rye · swiss · onion"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">⚠ the big one</span>
+      <h3 class="item-card__name">the cardiac arrest</h3>
+      <p class="item-card__desc">double patty · double bacon · double cheese · onion ring · egg</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.99</span>
+        <button class="item-card__add" data-add data-id="cardiac" data-name="the cardiac arrest" data-price="8.99" data-sub="double everything"><span>add to tab</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="squiggle" aria-hidden="true"><svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div></div>
+
+<!-- ========== FROG LEGS / PLATTERS ========== -->
+<section class="menu-section wrap" id="frog-legs">
+  <h2 class="menu-section__title">frog legs &amp; platters</h2>
+  <p class="menu-section__sub">the house specialty since 1933 · all-you-can-eat frog legs thursdays</p>
+  <div class="menu-grid menu-grid--2">
+
+    <article class="item-card">
+      <span class="item-card__sticker">house spec. ✦</span>
+      <h3 class="item-card__name">frog leg dinner</h3>
+      <p class="item-card__desc">battered &amp; fried frog legs · pub fries · slaw · horsey sauce</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$11.95</span>
+        <button class="item-card__add" data-add data-id="frog-legs" data-name="frog leg dinner" data-price="11.95" data-sub="signature · since 1933" data-emoji="🐸"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">big one</span>
+      <h3 class="item-card__name">the bullfrog</h3>
+      <p class="item-card__desc">double frog leg platter · pub fries · slaw · two sauces</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$15.99</span>
+        <button class="item-card__add" data-add data-id="bullfrog" data-name="the bullfrog" data-price="15.99" data-sub="double up · 2 sauces" data-emoji="🐸"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">ny strip</h3>
+      <p class="item-card__desc">12oz hand-cut · garlic butter · choice of side</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$13.95</span>
+        <button class="item-card__add" data-add data-id="ny-strip" data-name="ny strip" data-price="13.95" data-sub="12oz hand-cut" data-emoji="🥩"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">bbq chicken (1 piece)</h3>
+      <p class="item-card__desc">slow-cooked · house bbq glaze · choice of side</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$11.95</span>
+        <button class="item-card__add" data-add data-id="bbq-chicken-1" data-name="bbq chicken · 1 piece" data-price="11.95" data-sub="house bbq" data-emoji="🍗"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">bbq chicken (2 pieces)</h3>
+      <p class="item-card__desc">double up · slaw · pub fries · house bbq glaze</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$15.95</span>
+        <button class="item-card__add" data-add data-id="bbq-chicken-2" data-name="bbq chicken · 2 pieces" data-price="15.95" data-sub="double · 2 sides" data-emoji="🍗"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">broiled cod (2 pieces)</h3>
+      <p class="item-card__desc">flaky cod · lemon · tartar · pub fries · slaw</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$12.49</span>
+        <button class="item-card__add" data-add data-id="cod-2" data-name="broiled cod · 2 pieces" data-price="12.49" data-sub="lemon · tartar" data-emoji="🐟"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">premium</span>
+      <h3 class="item-card__name">crab cakes</h3>
+      <p class="item-card__desc">house-formed lump crab · remoulade · slaw · fries</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$14.49</span>
+        <button class="item-card__add" data-add data-id="crab-cakes" data-name="crab cakes" data-price="14.49" data-sub="lump · remoulade" data-emoji="🦀"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">famous</span>
+      <h3 class="item-card__name">hot wings basket</h3>
+      <p class="item-card__desc">6 bone-in wings · pick your sauce · celery · blue cheese</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$9.99</span>
+        <button class="item-card__add" data-add data-id="wings-basket" data-name="hot wings basket" data-price="9.99" data-sub="6 wings · pick sauce" data-emoji="🔥"><span>add to tab</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="squiggle" aria-hidden="true"><svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div></div>
+
+<!-- ========== SANDWICHES ========== -->
+<section class="menu-section wrap" id="sandwiches">
+  <h2 class="menu-section__title">sandwiches</h2>
+  <p class="menu-section__sub">served with pub fries · sub side salad +$1</p>
+  <div class="menu-grid menu-grid--2">
+
+    <article class="item-card">
+      <h3 class="item-card__name">grilled chicken breast</h3>
+      <p class="item-card__desc">marinated breast · lettuce · tomato · house aioli</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="grilled-chicken" data-name="grilled chicken breast" data-price="6.95" data-sub="lettuce · tomato"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">malibu chicken</h3>
+      <p class="item-card__desc">grilled breast · ham · swiss · honey mustard</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.95</span>
+        <button class="item-card__add" data-add data-id="malibu-chicken" data-name="malibu chicken" data-price="8.95" data-sub="ham · swiss · honey mustard"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">reuben</h3>
+      <p class="item-card__desc">corned beef · swiss · kraut · 1000 island · rye</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="reuben" data-name="reuben" data-price="6.95" data-sub="corned beef · rye"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">ham &amp; cheese</h3>
+      <p class="item-card__desc">grilled ham · choice of cheese · house bun</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="ham-cheese" data-name="ham &amp; cheese" data-price="6.95" data-sub="pick your cheese"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">3-cheese grilled cheese</h3>
+      <p class="item-card__desc">american · cheddar · provolone · buttery sourdough</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="grilled-cheese" data-name="3-cheese grilled cheese" data-price="6.95" data-sub="three cheeses · sourdough" data-emoji="🧀"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">blt</h3>
+      <p class="item-card__desc">smoked bacon · butter lettuce · vine tomato · toasted bread</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="blt" data-name="b.l.t." data-price="6.95" data-sub="classic" data-emoji="🥓"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">prime rib philly</h3>
+      <p class="item-card__desc">shaved prime rib · peppers · onions · provolone</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$7.95</span>
+        <button class="item-card__add" data-add data-id="prime-philly" data-name="prime rib philly" data-price="7.95" data-sub="prime rib · provolone"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">pork tenderloin</h3>
+      <p class="item-card__desc">hand-breaded indiana classic · lettuce · onion</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.95</span>
+        <button class="item-card__add" data-add data-id="pork-tenderloin" data-name="pork tenderloin" data-price="6.95" data-sub="hand-breaded"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">coney dog</h3>
+      <p class="item-card__desc">all-beef · coney chili · onion · mustard</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$1.99</span>
+        <button class="item-card__add" data-add data-id="coney-dog" data-name="coney dog" data-price="1.99" data-sub="chili · onion · mustard" data-emoji="🌭"><span>add to tab</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="squiggle" aria-hidden="true"><svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div></div>
+
+<!-- ========== BASKETS ========== -->
+<section class="menu-section wrap" id="baskets">
+  <h2 class="menu-section__title">fryer baskets</h2>
+  <p class="menu-section__sub">basket · pub fries · slaw · dipping sauce of your pick</p>
+  <div class="menu-grid">
+
+    <article class="item-card">
+      <h3 class="item-card__name">chicken tenders</h3>
+      <p class="item-card__desc">hand-breaded chicken · honey mustard · ranch</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$7.95</span>
+        <button class="item-card__add" data-add data-id="tenders" data-name="chicken tenders basket" data-price="7.95" data-sub="hand-breaded"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">shrimp basket</h3>
+      <p class="item-card__desc">crispy gulf shrimp · cocktail sauce · lemon</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.99</span>
+        <button class="item-card__add" data-add data-id="shrimp-basket" data-name="shrimp basket" data-price="8.99" data-sub="gulf · cocktail" data-emoji="🦐"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">clam strips</h3>
+      <p class="item-card__desc">golden ipswich clam strips · tartar · lemon</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$7.95</span>
+        <button class="item-card__add" data-add data-id="clams" data-name="clam strips basket" data-price="7.95" data-sub="ipswich · tartar"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">broiled cod (1 piece)</h3>
+      <p class="item-card__desc">flaky single fillet · lemon · tartar · pub fries</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.99</span>
+        <button class="item-card__add" data-add data-id="cod-1" data-name="broiled cod · 1 piece" data-price="8.99" data-sub="single fillet"><span>add to tab</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="squiggle" aria-hidden="true"><svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div></div>
+
+<!-- ========== SALADS &amp; SOUPS ========== -->
+<section class="menu-section wrap" id="salads">
+  <h2 class="menu-section__title">salads &amp; soups</h2>
+  <p class="menu-section__sub">crisp · loaded · house dressings</p>
+  <div class="menu-grid">
+
+    <article class="item-card">
+      <h3 class="item-card__name">chicken chef salad</h3>
+      <p class="item-card__desc">grilled chicken · egg · cheese · veg · house dressing</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.49</span>
+        <button class="item-card__add" data-add data-id="chef-salad" data-name="chicken chef salad" data-price="8.49" data-sub="grilled chicken · egg"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">buffalo chicken salad</h3>
+      <p class="item-card__desc">crispy buffalo tossed chicken · greens · blue cheese · ranch</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$9.49</span>
+        <button class="item-card__add" data-add data-id="buffalo-salad" data-name="buffalo chicken salad" data-price="9.49" data-sub="buffalo · blue cheese"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">taco salad</h3>
+      <p class="item-card__desc">tortilla bowl · beef · cheese · salsa · sour cream</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.99</span>
+        <button class="item-card__add" data-add data-id="taco-salad" data-name="taco salad" data-price="8.99" data-sub="loaded bowl"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">the 08</h3>
+      <p class="item-card__desc">house signature salad · bacon · cheddar · ranch · croutons</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.99</span>
+        <button class="item-card__add" data-add data-id="the-08" data-name="the 08 salad" data-price="8.99" data-sub="house signature"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">tossed salad</h3>
+      <p class="item-card__desc">mixed greens · cucumber · tomato · choice of dressing</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$2.49</span>
+        <button class="item-card__add" data-add data-id="tossed-salad" data-name="tossed salad" data-price="2.49" data-sub="side · house dressing" data-emoji="🥗"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">soup of the day</h3>
+      <p class="item-card__desc">seasonal · cup or bowl · ask your server</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$3.25</span>
+        <button class="item-card__add" data-add data-id="soup-day" data-name="soup of the day" data-price="3.25" data-sub="cup · seasonal" data-emoji="🥣"><span>add to tab</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="squiggle" aria-hidden="true"><svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 14 Q60 0 120 14 T240 14 T360 14 T480 14 T600 14 T720 14 T840 14 T960 14 T1080 14 T1200 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div></div>
+
+<!-- ========== DRINKS ========== -->
+<section class="menu-section wrap" id="drinks">
+  <h2 class="menu-section__title">drinks &amp; drafts</h2>
+  <p class="menu-section__sub">21 &amp; up · ask the bartender about tonight's rotating taps</p>
+  <div class="menu-grid menu-grid--2">
+
+    <article class="item-card">
+      <span class="item-card__sticker">house favorite ✦</span>
+      <h3 class="item-card__name">draft beer · 12oz</h3>
+      <p class="item-card__desc">cold pour · house tap selection</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$2.25</span>
+        <button class="item-card__add" data-add data-id="draft-12" data-name="draft beer · 12oz" data-price="2.25" data-sub="house tap" data-emoji="🍺"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">draft beer · 1/2 pitcher</h3>
+      <p class="item-card__desc">share with one good friend</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$3.50</span>
+        <button class="item-card__add" data-add data-id="draft-half" data-name="draft beer · half pitcher" data-price="3.50" data-sub="half pitcher" data-emoji="🍺"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">draft beer · pitcher</h3>
+      <p class="item-card__desc">the table-share size</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$6.50</span>
+        <button class="item-card__add" data-add data-id="draft-pitcher" data-name="draft beer · pitcher" data-price="6.50" data-sub="full pitcher" data-emoji="🍺"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">guest beer · 12oz</h3>
+      <p class="item-card__desc">rotating craft &amp; local · ask what's on</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$3.50</span>
+        <button class="item-card__add" data-add data-id="guest-12" data-name="guest beer · 12oz" data-price="3.50" data-sub="rotating craft" data-emoji="🍻"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">guest pitcher</h3>
+      <p class="item-card__desc">full pitcher of whatever's on the guest tap</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$10.00</span>
+        <button class="item-card__add" data-add data-id="guest-pitcher" data-name="guest pitcher" data-price="10.00" data-sub="guest tap · full" data-emoji="🍻"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <span class="item-card__sticker">signature ✦</span>
+      <h3 class="item-card__name">the green frog</h3>
+      <p class="item-card__desc">house signature cocktail · midori · vodka · pineapple · lime</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$8.50</span>
+        <button class="item-card__add" data-add data-id="green-frog-drink" data-name="the green frog (cocktail)" data-price="8.50" data-sub="midori · vodka · lime" data-emoji="🐸"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">coca-cola products</h3>
+      <p class="item-card__desc">fountain · refills are free</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$2.00</span>
+        <button class="item-card__add" data-add data-id="soda" data-name="fountain soda" data-price="2.00" data-sub="free refills"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">iced tea</h3>
+      <p class="item-card__desc">brewed fresh · sweet or unsweet · lemon on the side</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$2.00</span>
+        <button class="item-card__add" data-add data-id="iced-tea" data-name="iced tea" data-price="2.00" data-sub="sweet or unsweet" data-emoji="🍋"><span>add to tab</span></button>
+      </div>
+    </article>
+
+    <article class="item-card">
+      <h3 class="item-card__name">root beer float</h3>
+      <p class="item-card__desc">cold root beer · vanilla ice cream · long spoon</p>
+      <div class="item-card__row">
+        <span class="item-card__price">$4.50</span>
+        <button class="item-card__add" data-add data-id="root-beer-float" data-name="root beer float" data-price="4.50" data-sub="vanilla scoop" data-emoji="🍦"><span>add to tab</span></button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/frog-mark.png" alt="">
+      <div class="footer__brand-text">Green Frog</div>
+      <span class="footer__brand-tag">neighborhood sports pub · est. 1933 ✦</span>
+    </div>
+    <div>
+      <h4 class="footer__title">visit</h4>
+      <div class="footer__list">
+        <a>820 Spring St</a>
+        <a>Fort Wayne, IN 46808</a>
+        <a href="tel:+12604203764">(260) 420-3764</a>
+        <a href="visit.html">hours &amp; directions</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer__title">menu</h4>
+      <div class="footer__list">
+        <a href="menu.html#starters">starters</a>
+        <a href="menu.html#burgers">burgers</a>
+        <a href="menu.html#frog-legs">frog legs</a>
+        <a href="menu.html#sandwiches">sandwiches</a>
+        <a href="menu.html#drinks">drinks &amp; drafts</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer__title">say hi</h4>
+      <div class="footer__list">
+        <a href="https://www.facebook.com/greenfroginnfw" target="_blank" rel="noopener">facebook.com/greenfroginnfw</a>
+        <a href="mailto:hello@greenfroginn.com">hello@greenfroginn.com</a>
+        <a href="story.html">our story</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">© 2026 The Green Frog Inn · pouring since 1933 ✦</div>
+</footer>
+
+<aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+  <div class="cart-drawer__scrim"></div>
+  <div class="cart-drawer__panel">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">your tab ✦</h2>
+      <button class="cart-drawer__close" data-cart-close aria-label="Close tab">×</button>
+    </div>
+    <div class="cart-list" data-cart-list></div>
+    <div class="cart-empty" data-cart-empty>
+      <img src="assets/img/frog-mark.png" alt="">
+      <p>nothing on the tab yet — pick something good</p>
+      <a class="btn btn--ember btn--small" href="menu.html" style="margin-top:1rem">browse menu</a>
+    </div>
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span>total <small>(pickup)</small></span>
+        <span data-cart-total>$0.00</span>
+      </div>
+      <button class="btn btn--ember cart-checkout" data-cart-checkout>place pickup order →</button>
+      <p style="text-align:center;margin-top:.7rem;font-family:var(--font-hand);color:var(--ember-deep);font-size:1.05rem">order online, pick up at 820 spring st</p>
+    </div>
+  </div>
+</aside>
+
+<div class="modal" data-modal hidden role="dialog" aria-modal="true" aria-labelledby="modal-title-m">
+  <div class="modal__scrim" data-modal-close></div>
+  <div class="modal__panel">
+    <header class="modal__header">
+      <h2 id="modal-title-m" data-modal-title>customize</h2>
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+    </header>
+    <p class="modal__desc" data-modal-desc></p>
+    <div data-modal-groups></div>
+    <footer class="modal__footer">
+      <div class="modal__total"><span>total</span> <span data-modal-total>$0.00</span></div>
+      <div class="modal__buttons">
+        <button class="modal__remove" type="button" data-modal-remove style="display:none">remove from tab</button>
+        <button class="btn btn--ember modal__add" type="button" data-modal-confirm>add to tab</button>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script src="assets/js/customize.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

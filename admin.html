@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1B3329">
+  <title>Admin — The Green Frog Inn</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="The Green Frog Inn admin dashboard — orders, menu, analytics, accounting, events, customers, settings.">
+  <link rel="icon" href="assets/img/frog-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin">
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="admin__sidebar">
+    <a class="admin__brand" href="index.html">
+      <img src="assets/img/frog-mark.png" alt="">
+      <div>
+        <span class="admin__brand-text">Green Frog</span>
+        <span class="admin__brand-tag">admin · est. 1933</span>
+      </div>
+    </a>
+
+    <nav class="admin__nav" aria-label="Admin">
+      <button data-tab="dashboard">
+        <span class="admin__nav-icon">◎</span>
+        <span>dashboard</span>
+      </button>
+      <button data-tab="orders">
+        <span class="admin__nav-icon">◐</span>
+        <span>orders</span>
+        <span class="admin__nav-count" data-nav-count="orders"></span>
+      </button>
+      <button data-tab="menu">
+        <span class="admin__nav-icon">☰</span>
+        <span>menu</span>
+      </button>
+      <button data-tab="analytics">
+        <span class="admin__nav-icon">⌃</span>
+        <span>analytics</span>
+      </button>
+      <button data-tab="accounting">
+        <span class="admin__nav-icon">$</span>
+        <span>accounting</span>
+      </button>
+      <button data-tab="events">
+        <span class="admin__nav-icon">◇</span>
+        <span>events</span>
+      </button>
+      <button data-tab="customers">
+        <span class="admin__nav-icon">◉</span>
+        <span>customers</span>
+      </button>
+      <button data-tab="settings">
+        <span class="admin__nav-icon">⚙</span>
+        <span>settings</span>
+      </button>
+    </nav>
+
+    <div class="admin__sidebar-foot">
+      <div class="admin__user">
+        <div class="admin__user-avatar">E</div>
+        <div>
+          <div class="admin__user-name">eric k.</div>
+          <div class="admin__user-role">owner</div>
+        </div>
+      </div>
+      <button data-reset
+              style="margin-top:.6rem;width:100%;font-family:var(--font-hand);font-size:1rem;color:var(--peach);padding:.45rem;background:transparent;border:1.5px dashed rgba(251,246,232,.2);border-radius:8px;cursor:pointer">
+        reset demo data
+      </button>
+      <a href="index.html"
+         style="display:block;margin-top:.45rem;text-align:center;font-family:var(--font-hand);font-size:1rem;color:var(--cream);opacity:.7">
+        ← back to site
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========== MAIN ========== -->
+  <main class="admin__main">
+
+    <header class="admin__topbar">
+      <div>
+        <h1 data-page-title>dashboard</h1>
+        <span class="hand" data-page-sub>here's how the frog is doing today</span>
+      </div>
+      <div class="admin__topbar-actions">
+        <button class="btn btn--ghost btn--small" onclick="window.FrogAdmin.renderAll()">refresh</button>
+        <button class="btn btn--ember btn--small" onclick="alert('demo only — would print receipts in production')">print queue</button>
+      </div>
+    </header>
+
+    <!-- ===== DASHBOARD TAB (NEW — overview) ===== -->
+    <section class="admin__tab is-active" data-tab="dashboard">
+      <div data-stat-row class="stat-row"></div>
+
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:1.2rem;align-items:start">
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">live queue · 5 most recent</span>
+              <h2>orders right now</h2>
+            </div>
+            <a class="chip" href="#orders" onclick="window.FrogAdmin.switchTab('orders')">view all →</a>
+          </div>
+          <div class="orders-grid" data-orders-mini></div>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">tonight at the frog</span>
+              <h2>today's specials</h2>
+            </div>
+          </div>
+          <div data-today-specials style="display:flex;flex-direction:column;gap:.65rem"></div>
+          <div style="margin-top:1rem;padding-top:.8rem;border-top:1.5px dashed var(--dusk-2);font-family:var(--font-hand);color:var(--ember-deep);font-size:1.1rem">
+            🐸 thursday all-you-can-eat frog legs — kitchen primed
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+        <div class="card">
+          <span class="hand" style="color:var(--ember-deep);font-size:1.05rem">today's revenue</span>
+          <h3 style="font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:1.8rem;margin-top:.2rem" data-quick-rev>$0</h3>
+          <p style="color:var(--ink-soft);font-size:.95rem;margin-top:.4rem">across <span data-quick-orders>0</span> tickets · pickup + bar</p>
+        </div>
+        <div class="card">
+          <span class="hand" style="color:var(--ember-deep);font-size:1.05rem">in queue</span>
+          <h3 style="font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:1.8rem;margin-top:.2rem" data-quick-queue>0</h3>
+          <p style="color:var(--ink-soft);font-size:.95rem;margin-top:.4rem">pending + ready · open the orders tab</p>
+        </div>
+        <div class="card">
+          <span class="hand" style="color:var(--ember-deep);font-size:1.05rem">avg ticket size</span>
+          <h3 style="font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:1.8rem;margin-top:.2rem" data-quick-avg>$0</h3>
+          <p style="color:var(--ink-soft);font-size:.95rem;margin-top:.4rem">trending up vs last week</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">at-a-glance · this week</span>
+            <h2>quick actions</h2>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem">
+          <button class="chip" style="padding:1rem;text-align:left" onclick="window.FrogAdmin.switchTab('menu')">
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--midnight);font-size:1.05rem">edit a menu price</div>
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);margin-top:.2rem">opens menu editor</div>
+          </button>
+          <button class="chip" style="padding:1rem;text-align:left" onclick="window.FrogAdmin.switchTab('events')">
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--midnight);font-size:1.05rem">post a new event</div>
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);margin-top:.2rem">trivia · live music · specials</div>
+          </button>
+          <button class="chip" style="padding:1rem;text-align:left" onclick="window.FrogAdmin.switchTab('analytics')">
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--midnight);font-size:1.05rem">see top sellers</div>
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);margin-top:.2rem">7-day revenue breakdown</div>
+          </button>
+          <button class="chip" style="padding:1rem;text-align:left" onclick="window.FrogAdmin.switchTab('customers')">
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--midnight);font-size:1.05rem">customer loyalty</div>
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);margin-top:.2rem">top regulars · rewards</div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ORDERS TAB ===== -->
+    <section class="admin__tab" data-tab="orders">
+      <div data-stat-row class="stat-row"></div>
+
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">live pickup queue</span>
+            <h2>orders</h2>
+          </div>
+          <div class="card__head-tools orders-filter">
+            <button class="chip is-active" data-filter="all">all</button>
+            <button class="chip" data-filter="pending">pending</button>
+            <button class="chip" data-filter="ready">ready</button>
+            <button class="chip" data-filter="done">picked up</button>
+          </div>
+        </div>
+        <div class="orders-grid" data-orders></div>
+      </div>
+    </section>
+
+    <!-- ===== MENU TAB ===== -->
+    <section class="admin__tab" data-tab="menu">
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">edit anything · auto-saves</span>
+            <h2>menu items</h2>
+          </div>
+          <div class="card__head-tools">
+            <button class="chip">+ new item</button>
+          </div>
+        </div>
+        <div class="menu-editor" data-menu-edit></div>
+      </div>
+    </section>
+
+    <!-- ===== ANALYTICS TAB ===== -->
+    <section class="admin__tab" data-tab="analytics">
+      <div data-stat-row class="stat-row"></div>
+
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:1.2rem;align-items:start">
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">revenue · last 7 days</span>
+              <h2>$11,840 this week</h2>
+            </div>
+          </div>
+          <div class="chart-bar" data-chart-rev></div>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">top sellers</span>
+              <h2>this week</h2>
+            </div>
+          </div>
+          <div class="top-list" data-top-list></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">where orders come from</span>
+            <h2>traffic sources</h2>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem">
+          <div style="text-align:center;padding:1rem;background:var(--cream);border:1.5px solid var(--midnight);border-radius:12px">
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);font-size:1rem">walk-in</div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:var(--midnight)">68%</div>
+          </div>
+          <div style="text-align:center;padding:1rem;background:var(--cream);border:1.5px solid var(--midnight);border-radius:12px">
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);font-size:1rem">website</div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:var(--midnight)">19%</div>
+          </div>
+          <div style="text-align:center;padding:1rem;background:var(--cream);border:1.5px solid var(--midnight);border-radius:12px">
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);font-size:1rem">facebook</div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:var(--midnight)">8%</div>
+          </div>
+          <div style="text-align:center;padding:1rem;background:var(--cream);border:1.5px solid var(--midnight);border-radius:12px">
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);font-size:1rem">word of mouth</div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;color:var(--midnight)">5%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACCOUNTING TAB ===== -->
+    <section class="admin__tab" data-tab="accounting">
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">profit by category · this week</span>
+            <h2>P&amp;L breakdown</h2>
+          </div>
+          <div class="card__head-tools">
+            <button class="chip is-active">week</button>
+            <button class="chip">month</button>
+            <button class="chip">YTD</button>
+          </div>
+        </div>
+        <table class="acct-table">
+          <thead>
+            <tr>
+              <th>category</th>
+              <th style="text-align:right">revenue</th>
+              <th style="text-align:right">cost of goods</th>
+              <th style="text-align:right">profit</th>
+              <th style="text-align:right">margin</th>
+            </tr>
+          </thead>
+          <tbody data-acct-rows></tbody>
+        </table>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+        <div class="card">
+          <span class="hand" style="color:var(--ember-deep);font-size:1.05rem">est. monthly</span>
+          <h3 style="font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:1.6rem;margin-top:.2rem">$47,360 rev</h3>
+          <p style="color:var(--ink-soft);font-size:.95rem;margin-top:.4rem">based on 4-week avg</p>
+        </div>
+        <div class="card">
+          <span class="hand" style="color:var(--ember-deep);font-size:1.05rem">labor cost</span>
+          <h3 style="font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:1.6rem;margin-top:.2rem">$12,400 / mo</h3>
+          <p style="color:var(--ink-soft);font-size:.95rem;margin-top:.4rem">26.2% of revenue</p>
+        </div>
+        <div class="card">
+          <span class="hand" style="color:var(--ember-deep);font-size:1.05rem">est. tax owed (Q2)</span>
+          <h3 style="font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:1.6rem;margin-top:.2rem">$2,448</h3>
+          <p style="color:var(--ink-soft);font-size:.95rem;margin-top:.4rem">7% IN sales tax · accrued</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="hand" style="color:var(--ember-deep);font-size:1.1rem">notes from accounting</span>
+        <p style="margin-top:.5rem;color:var(--ink-soft);line-height:1.6">
+          Beverage margins improved 4 pts after switching draft suppliers in March.
+          Frog legs continue to be the highest-margin entree on the menu (62% margin).
+          Wednesday wing night is loss-leader but drives a 41% beverage attach rate.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== EVENTS TAB ===== -->
+    <section class="admin__tab" data-tab="events">
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">what's coming up</span>
+            <h2>upcoming events</h2>
+          </div>
+          <div class="card__head-tools">
+            <button class="chip">+ new event</button>
+          </div>
+        </div>
+        <div class="event-list" data-events-list></div>
+      </div>
+
+      <div class="card">
+        <span class="hand" style="color:var(--ember-deep);font-size:1.1rem">recurring weekly</span>
+        <p style="margin-top:.5rem;color:var(--ink-soft);line-height:1.6">
+          Monday/Wednesday wing night auto-promotes via Facebook page each week.
+          Thursday all-you-can-eat frog legs is the most-attended recurring night —
+          consider adding a Friday fish counterpart promotion to balance traffic.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CUSTOMERS TAB (NEW) ===== -->
+    <section class="admin__tab" data-tab="customers">
+      <div data-stat-row-cust class="stat-row"></div>
+
+      <div class="card">
+        <div class="card__head">
+          <div>
+            <span class="hand">your regulars · loyalty</span>
+            <h2>top customers this month</h2>
+          </div>
+          <div class="card__head-tools">
+            <button class="chip is-active">visits</button>
+            <button class="chip">spend</button>
+            <button class="chip">recency</button>
+          </div>
+        </div>
+        <div class="customer-list" data-customer-list></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:1.2rem;align-items:start">
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">stamps redeemed</span>
+              <h2>loyalty program</h2>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:.5rem">
+            <div style="display:flex;justify-content:space-between;padding:.7rem;background:var(--cream);border-radius:8px;border:1.5px solid var(--midnight)">
+              <span>10 visits → free burger</span><span style="font-family:var(--font-display);font-weight:800;color:var(--ember-deep)">38 active</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:.7rem;background:var(--cream);border-radius:8px;border:1.5px solid var(--midnight)">
+              <span>20 visits → free frog leg dinner</span><span style="font-family:var(--font-display);font-weight:800;color:var(--ember-deep)">14 active</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:.7rem;background:var(--cream);border-radius:8px;border:1.5px solid var(--midnight)">
+              <span>birthday drink (auto)</span><span style="font-family:var(--font-display);font-weight:800;color:var(--ember-deep)">7 this month</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">marketing list</span>
+              <h2>email signups</h2>
+            </div>
+          </div>
+          <div style="text-align:center;padding:1rem 0">
+            <div style="font-family:var(--font-display);font-weight:800;color:var(--midnight);font-size:2.4rem">412</div>
+            <div style="font-family:var(--font-hand);color:var(--ember-deep);font-size:1.1rem">subscribers · +28 this month</div>
+            <button class="btn btn--ember btn--small" style="margin-top:1rem" onclick="alert('demo only — would launch email composer')">
+              compose newsletter →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SETTINGS TAB ===== -->
+    <section class="admin__tab" data-tab="settings">
+      <div class="settings-grid">
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">where you are</span>
+              <h2>location</h2>
+            </div>
+          </div>
+          <div class="field">
+            <label>address</label>
+            <input type="text" data-setting="address">
+          </div>
+          <div class="field">
+            <label>phone</label>
+            <input type="text" data-setting="phone">
+          </div>
+          <div class="field">
+            <label>facebook handle</label>
+            <input type="text" data-setting="facebook">
+          </div>
+          <div class="field">
+            <label>est. pickup time (minutes)</label>
+            <input type="number" data-setting="pickupMin" min="1" max="60">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <div>
+              <span class="hand">when you're open</span>
+              <h2>hours</h2>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:.55rem">
+            <div class="field"><label>monday</label>    <input type="text" data-setting="hours-mon"></div>
+            <div class="field"><label>tuesday</label>   <input type="text" data-setting="hours-tue"></div>
+            <div class="field"><label>wednesday</label> <input type="text" data-setting="hours-wed"></div>
+            <div class="field"><label>thursday</label>  <input type="text" data-setting="hours-thu"></div>
+            <div class="field"><label>friday</label>    <input type="text" data-setting="hours-fri"></div>
+            <div class="field"><label>saturday</label>  <input type="text" data-setting="hours-sat"></div>
+            <div class="field"><label>sunday</label>    <input type="text" data-setting="hours-sun"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="hand" style="color:var(--ember-deep);font-size:1.1rem">demo notes</span>
+        <p style="margin-top:.5rem;color:var(--ink-soft);line-height:1.6">
+          This is a working demo — every change persists in your browser's localStorage.
+          Hit "reset demo data" in the sidebar to start fresh. In production, this would
+          sync to a Supabase backend with auth and a real order webhook from the
+          customer site at greenfroginn.com.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
