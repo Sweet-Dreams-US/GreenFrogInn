@@ -1,55 +1,70 @@
 /* =========================================================
-   THE GREEN FROG INN — Base + Tokens
-   "Pond & brass": neighborhood sports pub established 1933.
-   Vintage tavern. Forest green. Warm brass. Lily pads.
-   Come for the drinks, stay for the company.
+   THE GREEN FROG INN — Base + Tokens (v2 · scrapbook)
+   "From Mama Frog to Mama Frog Jr."
+   A family heirloom of a corner pub. Spring & Sherman, est. 1933.
+   Layout philosophy: scrapbook collage, taped polaroids, ribbon
+   dividers, handwritten margins. Imperfect on purpose.
    ========================================================= */
 
 :root {
   /* ---------- Color palette ---------- */
-  /* Forest — primary canvas (deep moss/pond green) */
-  --midnight:      #1B3329;  /* deep forest, almost black-green */
-  --midnight-deep: #0F1F18;  /* darkest pond ink */
-  --dusk:          #2E4D3C;  /* lighter forest */
-  --dusk-2:        #426B53;  /* hover/border forest */
+  /* Forest — primary (deeper, more saturated than v1) */
+  --midnight:      #142D22;  /* deep forest, almost-black green */
+  --midnight-deep: #0A1C15;  /* darkest pond */
+  --dusk:          #2A4634;  /* lighter forest */
+  --dusk-2:        #406547;  /* hover/border */
 
-  /* Brass — primary accent (warm pub brass/gold) */
+  /* Brass — secondary metallic accent (gilded letter, frame, scroll) */
   --ember:         #C9A03A;  /* warm brass */
-  --ember-deep:    #9D7C26;  /* deeper antiqued brass */
+  --ember-deep:    #966F1F;  /* deeper antiqued brass */
   --ember-glow:    #E8C868;  /* polished brass glow */
 
-  /* Honey — secondary warm (gilded gold) */
-  --honey:         #D9B65D;  /* honey gold */
-  --honey-soft:    #F2DD9C;  /* soft honey */
+  /* Oxblood — the new heart accent (red ribbon, stamp, love letter) */
+  --oxblood:       #8B2A36;  /* warm oxblood red */
+  --oxblood-deep:  #6A1E28;  /* deep blood red */
+  --oxblood-soft:  #B85664;  /* soft rose-red */
 
-  /* Moss — sage/lily-pad green accent */
+  /* Dusty rose — softer companion accent (Mama Frog energy) */
+  --rose:          #C8806E;  /* dusty rose */
+  --rose-soft:     #E6BDB0;  /* soft sand-pink */
+  --rose-deep:     #9B5947;  /* clay rose */
+
+  /* Moss — kept for variation */
   --moss:          #6F9456;  /* lily pad green */
   --moss-deep:     #4B6E3A;  /* leaf-back deep green */
 
-  /* Peach — copper rust accent (warm) */
-  --peach:         #C77441;  /* copper rust */
-  --peach-soft:    #E8C29B;  /* soft warm sand */
+  /* Honey — kept as warm yellow */
+  --honey:         #D9B65D;
+  --honey-soft:    #F2DD9C;
 
-  /* Parchment — page backdrop (aged paper) */
-  --cream:         #F2E7C7;  /* warm aged cream */
-  --cream-2:       #E8D9AE;  /* deeper cream parchment */
-  --cream-3:       #D3BD86;  /* sandstone */
-  --paper:         #FBF4DC;  /* lightest aged paper */
+  /* Peach is now mapped to dusty rose for cascade compatibility */
+  --peach:         var(--rose);
+  --peach-soft:    var(--rose-soft);
+
+  /* Parchment — page backdrops (more aged, more newsprint) */
+  --cream:         #F0E5C8;  /* aged scrapbook page */
+  --cream-2:       #E5D3A9;  /* deeper aged paper */
+  --cream-3:       #C8AB75;  /* tan masking tape */
+  --paper:         #FAF1D7;  /* lightest newsprint */
+  --paper-warm:    #F7E9C2;  /* warmer notepaper */
 
   /* Neutrals */
-  --ink:           #1A1410;  /* darkest brown-black */
-  --ink-soft:      #3A2F25;  /* warm dark */
+  --ink:           #1A1410;
+  --ink-soft:      #3A2F25;
+  --ink-fade:      #5B4A38;  /* softer ink for handwritten captions */
   --bone:          #FCF6E2;
 
-  /* Pond / frog accent */
-  --pond:          #0F2D24;  /* deep pond water */
-  --frog-belly:    #E8DC9B;  /* pale frog-belly yellow-cream */
-  --lily-bloom:    #F2C2D8;  /* lily bloom pink (subtle accent) */
+  /* Pond / frog */
+  --pond:          #0F2D24;
+  --frog-belly:    #E8DC9B;
+  --tape:          rgba(232, 200, 104, .65); /* translucent masking tape */
+  --tape-shadow:   rgba(20, 45, 34, .12);
 
-  /* ---------- Type ---------- */
-  --font-display: 'Playfair Display', 'Iowan Old Style', Georgia, serif;
+  /* ---------- Type — heirloom letter feel ---------- */
+  --font-display: 'Lora', 'Iowan Old Style', Georgia, serif;
   --font-body:    'Inter', system-ui, -apple-system, sans-serif;
   --font-hand:    'Caveat', 'Bradley Hand', cursive;
+  --font-script:  'Dancing Script', 'Caveat', cursive;
   --font-mono:    'JetBrains Mono', 'Courier New', monospace;
 
   /* ---------- Sizing ---------- */
@@ -59,42 +74,40 @@
   --fs-h6:      1.15rem;
   --fs-h5:      1.4rem;
   --fs-h4:      1.85rem;
-  --fs-h3:      2.4rem;
-  --fs-h2:      clamp(2rem, 4.6vw, 3.6rem);
-  --fs-h1:      clamp(2.2rem, 7vw, 5.6rem);
+  --fs-h3:      2.3rem;
+  --fs-h2:      clamp(2rem, 4.6vw, 3.4rem);
+  --fs-h1:      clamp(2.1rem, 7vw, 5.2rem);
   --fs-mega:    clamp(3.4rem, 11vw, 8.4rem);
 
   /* ---------- Spacing ---------- */
-  --gap-1: .35rem;
-  --gap-2: .7rem;
-  --gap-3: 1.1rem;
-  --gap-4: 1.6rem;
-  --gap-5: 2.4rem;
-  --gap-6: 3.5rem;
-  --gap-7: 5rem;
-  --gap-8: 7rem;
+  --gap-1: .35rem;  --gap-2: .7rem;  --gap-3: 1.1rem;
+  --gap-4: 1.6rem;  --gap-5: 2.4rem; --gap-6: 3.5rem;
+  --gap-7: 5rem;    --gap-8: 7rem;
 
   /* ---------- Radii ---------- */
   --r-blob:   55% 45% 60% 40% / 40% 55% 45% 60%;
   --r-blob-2: 38% 62% 45% 55% / 60% 30% 70% 40%;
   --r-pill:   999px;
-  --r-card:   16px;
-  --r-soft:   12px;
+  --r-card:   14px;
+  --r-soft:   10px;
+  --r-paper:  2px;        /* paper edges are nearly square */
 
-  /* ---------- Shadows ---------- */
-  --sh-paper:    0 1px 0 rgba(15,31,24,.04), 0 18px 32px -14px rgba(15,31,24,.28);
-  --sh-pop:      0 6px 0 var(--midnight);
-  --sh-pop-sm:   0 4px 0 var(--midnight);
+  /* ---------- Shadows — softer, paper-lifted ---------- */
+  --sh-paper:    0 1px 2px rgba(20,45,34,.08), 0 12px 24px -10px rgba(20,45,34,.30);
+  --sh-tape:     0 4px 10px -3px rgba(20,45,34,.25), 0 1px 0 rgba(255,255,255,.4) inset;
+  --sh-polaroid: 0 1px 2px rgba(20,45,34,.10), 0 22px 40px -14px rgba(20,45,34,.45);
+  --sh-pop:      0 5px 0 var(--midnight);
+  --sh-pop-sm:   0 3px 0 var(--midnight);
   --sh-pop-ember:0 4px 0 var(--ember-deep);
-  --sh-glow:     0 0 24px rgba(201,160,58,.45), 0 0 50px rgba(201,160,58,.18);
-  --sh-glow-sm:  0 0 14px rgba(201,160,58,.55);
-  --sh-glow-moss:0 0 18px rgba(111,148,86,.40);
+  --sh-glow:     0 0 22px rgba(201,160,58,.40), 0 0 48px rgba(201,160,58,.16);
+  --sh-glow-sm:  0 0 12px rgba(201,160,58,.50);
+  --sh-glow-rose:0 0 18px rgba(200,128,110,.35);
 
   /* ---------- Motion ---------- */
-  --ease-glow:    cubic-bezier(.22,.61,.36,1);
-  --ease-bouncy:  cubic-bezier(.34,1.32,.64,1);
-  --ease-soft:    cubic-bezier(.4,.05,.2,1);
-  --ease-hop:     cubic-bezier(.5,1.8,.4,.9);
+  --ease-glow:   cubic-bezier(.22,.61,.36,1);
+  --ease-bouncy: cubic-bezier(.34,1.32,.64,1);
+  --ease-soft:   cubic-bezier(.4,.05,.2,1);
+  --ease-hop:    cubic-bezier(.5,1.8,.4,.9);
 }
 
 /* ---------- Reset ---------- */
@@ -104,7 +117,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fs-body);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--ink-soft);
   background: var(--cream);
   overflow-x: hidden;
@@ -119,22 +132,22 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 input, textarea, select { font: inherit; color: inherit; }
 
-/* ---------- Page atmosphere — aged parchment + pond mist ---------- */
+/* ---------- Page atmosphere — aged newsprint + faint stains ---------- */
 body::before {
   content: "";
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  opacity: .25; mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.10 0 0 0 0 0.07 0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: .32; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='340' height='340'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.15 0 0 0 0 0.12 0 0 0 0 0.08 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
-/* Forest-to-amber wash, anchored to scroll — pond reflection */
+/* Warm forest-to-rose wash, anchored to scroll */
 body::after {
   content: "";
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background:
-    radial-gradient(55% 45% at 90% 0%, rgba(201,160,58,.22), transparent 70%),
-    radial-gradient(50% 40% at 8% 88%, rgba(75,110,58,.20), transparent 70%),
-    radial-gradient(30% 30% at 50% 50%, rgba(232,194,155,.10), transparent 70%),
+    radial-gradient(55% 45% at 90% 0%, rgba(201,160,58,.18), transparent 70%),
+    radial-gradient(50% 40% at 8% 90%, rgba(139,42,54,.12), transparent 70%),
+    radial-gradient(35% 35% at 50% 50%, rgba(232,194,155,.12), transparent 70%),
     linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
 }
 
@@ -143,32 +156,37 @@ main, section, header, footer, nav { position: relative; z-index: 1; }
 /* ---------- Typography presets ---------- */
 .eyebrow {
   font-family: var(--font-hand);
-  font-size: 1.4rem;
-  color: var(--ember-deep);
+  font-size: 1.55rem;
+  color: var(--oxblood);
   display: inline-block;
-  letter-spacing: .02em;
+  letter-spacing: .015em;
+  transform: rotate(-1.5deg);
 }
 .hand {
   font-family: var(--font-hand);
-  color: var(--ember-deep);
+  color: var(--oxblood);
   font-weight: 500;
 }
+.hand--brass { color: var(--ember-deep); }
+.hand--ink   { color: var(--ink-fade); }
+
 .display {
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -.02em;
-  line-height: .95;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -.015em;
+  line-height: 1.0;
   color: var(--midnight);
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -.018em;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -.012em;
   color: var(--midnight);
 }
-h1 { font-size: var(--fs-h1); line-height: 1.0; }
+h1 { font-size: var(--fs-h1); line-height: 1.02; }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
 h4 { font-size: var(--fs-h4); }
@@ -176,7 +194,7 @@ p { max-width: 64ch; }
 strong { color: var(--midnight); font-weight: 700; }
 em {
   font-style: italic;
-  color: var(--ember-deep);
+  color: var(--oxblood);
   font-family: var(--font-display);
 }
 
@@ -187,11 +205,11 @@ em {
 .section-tight { padding-block: var(--gap-6); }
 
 /* ---------- Selection / Focus ---------- */
-::selection { background: var(--ember); color: var(--midnight); }
+::selection { background: var(--oxblood); color: var(--paper); }
 :focus-visible {
-  outline: 2px solid var(--ember-deep);
+  outline: 2px solid var(--oxblood);
   outline-offset: 3px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 /* ---------- Reveal on scroll ---------- */
@@ -206,63 +224,38 @@ em {
 [data-reveal][data-reveal-delay="3"] { transition-delay: .28s; }
 [data-reveal][data-reveal-delay="4"] { transition-delay: .38s; }
 
-/* ---------- Brass glow animation (signature) ---------- */
-@keyframes ember-pulse {
-  0%, 100% {
-    box-shadow:
-      0 0 0 rgba(201,160,58,0),
-      0 0 18px rgba(201,160,58,.45),
-      0 0 40px rgba(201,160,58,.18);
-  }
-  50% {
-    box-shadow:
-      0 0 2px rgba(232,200,104,.7),
-      0 0 36px rgba(201,160,58,.65),
-      0 0 70px rgba(201,160,58,.35);
-  }
+/* JS-fallback: if Intersection Observer never fires (slow paint, screenshot
+   capture, reduced-motion), reveal everything after 1.2s so content is never
+   permanently invisible. */
+@keyframes scrapbook-fallback-reveal { to { opacity: 1; transform: none; } }
+[data-reveal]:not(.is-revealed) {
+  animation: scrapbook-fallback-reveal .8s var(--ease-soft) 1.2s forwards;
 }
 
-/* ---------- Lily pad drift (replaces firefly drift) ---------- */
+/* ---------- Brass / rose glow animations ---------- */
+@keyframes ember-pulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(201,160,58,0), 0 0 18px rgba(201,160,58,.40), 0 0 40px rgba(201,160,58,.18); }
+  50%      { box-shadow: 0 0 2px rgba(232,200,104,.70), 0 0 32px rgba(201,160,58,.60), 0 0 70px rgba(201,160,58,.30); }
+}
 @keyframes firefly-drift {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
   25%      { transform: translate(8px, -10px) rotate(6deg); }
   50%      { transform: translate(-4px, -18px) rotate(-4deg); }
   75%      { transform: translate(-10px, -6px) rotate(3deg); }
 }
-
-/* ---------- Frog hop (the signature motion) ---------- */
 @keyframes frog-hop {
   0%, 60%, 100% { transform: translateY(0); }
   20%           { transform: translateY(-14px) scaleY(.96); }
   35%           { transform: translateY(-6px)  scaleY(1.06); }
 }
-
-/* ---------- Pond ripple ---------- */
-@keyframes pond-ripple {
-  0%   { transform: scale(.85); opacity: 0; }
-  20%  { opacity: .6; }
-  100% { transform: scale(1.8); opacity: 0; }
-}
-
-/* ---------- Brass flicker (lantern flicker, gentle) ---------- */
 @keyframes glow-flicker {
-  0%, 100% { opacity: .9;  filter: brightness(1); }
-  45%      { opacity: 1;   filter: brightness(1.12); }
-  55%      { opacity: .8;  filter: brightness(.94); }
+  0%, 100% { opacity: .9; filter: brightness(1); }
+  45%      { opacity: 1;  filter: brightness(1.12); }
+  55%      { opacity: .8; filter: brightness(.94); }
 }
-
-/* ---------- Bubble float (rising bubbles in hero) ---------- */
-@keyframes bubble-rise {
-  0%   { transform: translateY(0)     scale(.85); opacity: 0; }
-  10%  { opacity: .8; }
-  90%  { opacity: .55; }
-  100% { transform: translateY(-180px) scale(1.15); opacity: 0; }
-}
-
-/* ---------- Beer foam wobble (subtle, for accents) ---------- */
-@keyframes foam-wobble {
-  0%, 100% { transform: translateY(0)  rotate(0deg); }
-  50%      { transform: translateY(-2px) rotate(.6deg); }
+@keyframes paper-sway {
+  0%, 100% { transform: rotate(var(--rotate, -2deg)); }
+  50%      { transform: rotate(calc(var(--rotate, -2deg) + 0.8deg)) translateY(-2px); }
 }
 
 /* ---------- Reduced motion ---------- */
@@ -273,4 +266,5 @@ em {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  [data-reveal]:not(.is-revealed) { opacity: 1; transform: none; }
 }

@@ -9,10 +9,11 @@
   <link rel="icon" href="assets/img/frog-nav.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/scrapbook.css">
 </head>
 <body>
 
@@ -51,11 +52,12 @@
         <span>come for the drinks.</span>
         <span class="hero__title-glow">stay for the company.</span>
       </h1>
-      <span class="hero__hand-tag" data-reveal data-reveal-delay="2">+ frog legs done right since the great depression</span>
+      <span class="hero__hand-tag" data-reveal data-reveal-delay="2">+ a family-run corner of Bloomingdale since '33</span>
       <p class="hero__lede" data-reveal data-reveal-delay="2">
-        A 90-year-old neighborhood sports pub on the corner of Sherman &amp; Spring in
-        <strong>Fort Wayne</strong> — pouring cold drafts, plating burgers, and frying
-        the city's best frog legs since 1933. The TV's on. The stool's open. Pull up.
+        Ninety-one-year-old corner pub in <strong>Bloomingdale</strong> — Cindy
+        Henry's bar for two decades, now back in the family with her daughter
+        Elizabeth behind the wood. Cold drafts, frog legs, the warmest welcome
+        on the north side.
       </p>
       <div class="hero__ctas" data-reveal data-reveal-delay="3">
         <a class="btn btn--ember" href="menu.html">order pickup →</a>
@@ -94,34 +96,59 @@
       <span class="story__since">EST. 1933</span>
       <h2>a corner pub<br>that's outlasted<br><em>nearly everything.</em></h2>
       <p>
-        The Green Frog opened on the corner of Spring &amp; Sherman in <strong>1933</strong>,
-        right after Prohibition ended — a tiny neighborhood watering hole that wasn't
-        trying to be anything more than a place where you could sit, talk, and get
-        a cold one. Almost a century later, that's still all we're trying to do.
+        Cindy Henry — wife of the late Mayor Tom Henry — ran the Green Frog
+        for <strong>twenty years</strong> as Bloomingdale's unofficial mayor.
+        Knew every regular's drink. Made strangers feel like neighbors.
       </p>
       <p>
-        Eric brought the Frog back to its roots in <strong>October 2024</strong> —
-        same dim warm lighting, same dark wood bar, same neighborhood. New taps,
-        new burgers, same frog legs the regulars never let us take off the menu.
+        She passed in January 2024. Today her daughter <strong>Elizabeth</strong>
+        — "Mama Frog Jr." to the regulars — has the bar back in the family.
+        Same wood. Same flat top. Same name on the door.
       </p>
-      <a class="btn btn--moss" href="story.html">read the story</a>
+      <a class="btn btn--moss" href="story.html">the henry family story →</a>
     </div>
     <div class="story__photos" data-reveal data-reveal-delay="2">
-      <figure class="polaroid polaroid--tilt-l">
+      <figure class="polaroid polaroid--tilt-l taped">
         <img src="assets/img/storefront.png" alt="The Green Frog Inn corner pub at twilight, warm amber glow inside the windows">
-        <figcaption>the corner on spring &amp; sherman</figcaption>
+        <figcaption>spring &amp; sherman · ours since '33</figcaption>
       </figure>
-      <figure class="polaroid polaroid--tilt-r">
+      <figure class="polaroid polaroid--tilt-r taped taped--single">
         <img src="assets/img/frog-legs.png" alt="A plate of crispy golden fried frog legs with parsley and lemon">
-        <figcaption>house frog legs ✦</figcaption>
+        <figcaption>cindy's frog legs ✦</figcaption>
       </figure>
-      <figure class="polaroid polaroid--tilt-c">
+      <figure class="polaroid polaroid--tilt-c taped">
         <img src="assets/img/interior.png" alt="Cozy 1933 pub interior with brass beer taps, dark wood bar, and warm tungsten lights">
-        <figcaption>same warm light, 90 years on</figcaption>
+        <figcaption>same warm light, 91 years on</figcaption>
       </figure>
     </div>
   </div>
 </section>
+
+<!-- ========== HENRY FAMILY CALLOUT (subtle) ========== -->
+<section class="wrap-narrow section-tight" data-reveal>
+  <div class="ribbon"><span class="ribbon__label">a quiet thank-you</span></div>
+  <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:2rem;align-items:center;margin-top:1rem" class="henry-callout">
+    <span class="sticker" style="justify-self:center">for<br>cindy<br>✦</span>
+    <div class="note-card" style="--rotate:-1.2deg">
+      <h3>Mama Frog → Mama Frog Jr.</h3>
+      <p>
+        Cindy Henry ran this bar for 20 years. Her daughter Elizabeth runs
+        it now. The Frog has been in the Henry family longer than most
+        Fort Wayne kids have been alive — and we plan to keep it that way.
+      </p>
+      <div class="note-card__signoff" style="display:flex;align-items:center;gap:.6rem">
+        <a href="story.html" style="color:var(--oxblood);border-bottom:2px dashed var(--oxblood);padding-bottom:1px">read the family story →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 720px) {
+    .henry-callout { grid-template-columns: 1fr !important; text-align: center; }
+    .henry-callout .sticker { margin: 0 auto; }
+  }
+</style>
 
 <!-- ========== HIGHLIGHTS ========== -->
 <section class="highlights">
